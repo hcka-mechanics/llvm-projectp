@@ -1,0 +1,19 @@
+name: New-GitHub-action-llvm-projectp
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron: '9/5 * * * *'
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: new debug
+      run: source     ./llvm-projectp-shell
+  cd:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: new cd
+      run: .   ./llvm-projectp-shell
